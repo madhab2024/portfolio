@@ -1,0 +1,135 @@
+/* Terminal Specific Styling */
+.terminal-window {
+    background-color: #0a0a0a !important; /* Deep Dark Opaque */
+    border: 1px solid rgba(0, 243, 255, 0.3); /* Cyan Border */
+    font-family: 'JetBrains Mono', 'Consolas', monospace;
+    width: 100%;
+    max-width: 900px; /* Fixed substantial width */
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 243, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: none !important;
+}
+
+.terminal-header {
+    background-color: rgba(0, 243, 255, 0.05); /* Very subtle cyan tint */
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+    justify-content: center;
+    position: relative;
+    height: 40px;
+}
+
+.terminal-controls {
+    position: absolute;
+    left: 15px;
+    display: flex;
+    gap: 8px;
+}
+
+.control {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+.control:hover { opacity: 1; }
+
+.control.close { background-color: #ff5f56; }
+.control.minimize { background-color: #ffbd2e; }
+.control.maximize { background-color: #27c93f; }
+
+.terminal-title {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.terminal-icon {
+    color: #00f3ff;
+}
+
+.terminal-body {
+    padding: 20px;
+    height: 600px; /* Fixed substantial height */
+    overflow-y: auto;
+    color: #e0e6ed;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 0.95rem;
+    background: 
+        linear-gradient(rgba(0, 243, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 243, 255, 0.02) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Scrollbar for terminal */
+.terminal-body::-webkit-scrollbar { width: 6px; }
+.terminal-body::-webkit-scrollbar-track { background: #0a0a0a; }
+.terminal-body::-webkit-scrollbar-thumb { background: rgba(0, 243, 255, 0.2); border-radius: 3px; }
+.terminal-body::-webkit-scrollbar-thumb:hover { background: rgba(0, 243, 255, 0.4); }
+
+.terminal-line {
+    display: flex;
+    gap: 12px;
+    line-height: 1.5;
+    align-items: flex-start;
+}
+
+.terminal-line.ascii-art {
+    color: #27c93f; /* Green ASCII */
+    font-weight: bold;
+    font-size: 0.45rem; /* Smaller font to fit width */
+    line-height: 0.8rem;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+    display: block; /* ASCII art needs to be block/pre to render correctly */
+}
+
+.ascii-content {
+    font-family: inherit;
+    margin: 0;
+    color: inherit;
+    white-space: pre;
+}
+
+.terminal-line.command {
+    color: #00f3ff; /* Cyan */
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+.terminal-line.output {
+    color: #94a3b8;
+    margin-left: 4px;
+}
+
+.prompt {
+    color: #bc13fe; /* Purple Prompt */
+    user-select: none;
+    font-weight: bold;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background-color: #00f3ff;
+    animation: blink 1s step-end infinite;
+    vertical-align: text-bottom;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}

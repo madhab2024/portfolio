@@ -1,0 +1,225 @@
+.unlock-skills-section {
+  /* background removed */
+  padding: 6rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.unlock-skills-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-top: 1rem;
+}
+
+.skills-carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  cursor: grab;
+  padding: 2rem 0;
+}
+
+.skills-carousel-wrapper:active {
+  cursor: grabbing;
+}
+
+.skills-grid {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  padding: 0 2rem;
+}
+
+.carousel-hint {
+  text-align: center;
+  margin-top: 2rem;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  animation: pulse-hint 2s ease-in-out infinite;
+}
+
+@keyframes pulse-hint {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.skill-card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  position: relative;
+  overflow: hidden;
+  min-width: 320px;
+  max-width: 320px;
+  flex-shrink: 0;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  z-index: 0;
+}
+
+.skill-card.unlocked::before {
+  opacity: 0.1;
+}
+
+.skill-card:hover {
+  border-color: rgba(99, 102, 241, 0.6);
+  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.4),
+              0 0 40px rgba(99, 102, 241, 0.2);
+  background: rgba(30, 41, 59, 0.85);
+}
+
+.skill-icon-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.5rem;
+}
+
+.skill-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  color: white;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.5);
+}
+
+.skill-name {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #f1f5f9;
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+}
+
+.skill-details {
+  position: relative;
+  z-index: 1;
+}
+
+.skill-description {
+  color: #cbd5e1;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  min-height: 45px;
+}
+
+.skill-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 10px;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+  transition: width 0.3s ease;
+}
+
+.skill-level {
+  font-weight: 700;
+  color: #667eea;
+  font-size: 1.1rem;
+  min-width: 50px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .unlock-skills-section {
+    padding: 4rem 0 3rem;
+  }
+
+  .unlock-skills-section .container {
+    padding: 0 1rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .skills-carousel-wrapper {
+    padding: 1.5rem 0;
+  }
+
+  .skills-grid {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .skill-card {
+    min-width: 260px;
+    max-width: 260px;
+    padding: 1.5rem;
+  }
+
+  .skill-icon-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+}
