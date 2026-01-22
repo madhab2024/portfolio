@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://madhab-portfolio-2026.netlify.app/sitemap.xml

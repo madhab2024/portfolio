@@ -10,6 +10,7 @@ import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Background3D from './components/Background3D';
+import SEO from './components/SEO';
 import './index.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Routes>
               <Route path="/" element={
                 <>
+                  <SEO />
                   <Hero />
                   <About />
                   <UnlockSkills />
