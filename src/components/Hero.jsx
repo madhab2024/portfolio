@@ -57,7 +57,7 @@ const Hero = () => {
                                     strokeWidth="2"
                                     className="svg-text"
                                 >
-                                    Madhab Mondall
+                                    Madhab Mondal
                                 </text>
                             </svg>
                         </motion.div>
@@ -68,7 +68,7 @@ const Hero = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6 }}
                         >
-                            <span className="typing-text">Full Stack Developer</span>
+                            <span className="typing-text">Full Stack Developer (AWS Certified)</span>
                         </motion.h2>
                         <motion.p
                             className="hero-description"
