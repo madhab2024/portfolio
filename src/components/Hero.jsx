@@ -57,7 +57,7 @@ const Hero = () => {
                                     strokeWidth="2"
                                     className="svg-text"
                                 >
-                                    Madhab Mondal
+                                    Madhab Mondall
                                 </text>
                             </svg>
                         </motion.div>
