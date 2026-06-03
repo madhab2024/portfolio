@@ -10,7 +10,7 @@ const Hero = () => {
           
           <div className="lg:col-span-8 z-10 reveal">
             <h1 className="font-heading font-black text-[12vw] lg:text-[8vw] leading-[0.9] tracking-tighter uppercase mb-6">
-              <span className="block text-[var(--color-dark-navy)]">MADHAB</span>
+              <span className="block text-[var(--color-dark-navy)]">MADHABB</span>
               <span className="block text-stroke-white" style={{ WebkitTextStroke: '3px var(--color-dark-navy)' }}>MONDAL</span>
               <span className="block text-[var(--color-primary-orange)] text-5xl mt-4">SOFTWARE DEVELOPER</span>
             </h1>
